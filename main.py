@@ -44,7 +44,7 @@ def dup_ship_loc(ship_row, ship_col, ship_list):
   for i in range(len(ship_list)):
     if ship_list[i] == (ship_row, ship_col, 1):
       return True
-    return False
+  return False
 
 while len(ship_list) < ship_number:
   ship_row = random_row(board)
