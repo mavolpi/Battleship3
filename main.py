@@ -52,7 +52,7 @@ while len(ship_list) < ship_number:
   if not dup_ship_loc(ship_row, ship_col, ship_list):
     ship_list.append((ship_row, ship_col, 1))
     if double_length_ships > 0:
-      double_len_ship
+      double_len_ship(ship_row, ship_col, ship_list)
       double_length_ships = double_length_ships - 1
     print (ship_row + 1, ship_col + 1)
 
