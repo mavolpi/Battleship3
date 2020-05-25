@@ -10,6 +10,7 @@ print " "
 
 
 extra_guesses_allowed = int(raw_input("Number of Extra Guesses Allowed: "))
+print " "
 
 total_ships_alive = ship_number
 
@@ -23,6 +24,7 @@ def print_board(board):
     print " ".join(row)
 
 print_board(board)
+print " "
 
 def random_row(board):
   return randint(0, len(board) - 1)
@@ -41,7 +43,6 @@ while len(ship_list) < ship_number:
   ship_col = random_col(board)
   if not dup_ship_loc(ship_row, ship_col, ship_list):
     ship_list.append((ship_row, ship_col, 1))
-    print " "
     print (ship_row + 1, ship_col + 1)
     print " "
   
