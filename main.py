@@ -34,6 +34,12 @@ def random_row(board):
 def random_col(board):
   return randint(0, len(board[0]) - 1)
 
+#Create 2-piece ships
+def double_len_ship(ship_row, ship_col, ship_list):
+  for i in range(0,1):
+    ship_list.append(ship_row + 1, ship_col + 1, 1)
+
+
 def dup_ship_loc(ship_row, ship_col, ship_list):
   for i in range(len(ship_list)):
     if ship_list[i] == (ship_row, ship_col, 1):
