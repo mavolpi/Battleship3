@@ -25,6 +25,8 @@ def print_board(board):
 
 print_board(board)
 print " "
+print "Solution Key: "
+print " "
 
 def random_row(board):
   return randint(0, len(board) - 1)
@@ -44,7 +46,8 @@ while len(ship_list) < ship_number:
   if not dup_ship_loc(ship_row, ship_col, ship_list):
     ship_list.append((ship_row, ship_col, 1))
     print (ship_row + 1, ship_col + 1)
-    print " "
+
+print " "
   
 #Guess checking Loop
 
