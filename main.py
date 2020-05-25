@@ -101,9 +101,7 @@ for turn in range(extra_guesses_allowed + ship_number):
     print " "
     break
 
-
   #print "Total Ships Alive %s" % total_ships_alive
-
 
   print_board(board)
   print " "
