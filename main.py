@@ -8,6 +8,7 @@ print " "
 print "You will have the same number of guesses as ships, plus a number of extras. "
 print " "
 
+double_length_ships = ship_number - 1
 
 extra_guesses_allowed = int(raw_input("Number of Extra Guesses Allowed: "))
 print " "
@@ -36,9 +37,8 @@ def random_col(board):
 
 #Create 2-piece ships
 def double_len_ship(ship_row, ship_col, ship_list):
-  for i in range(0,1):
+  for i in range(double_length_ships):
     ship_list.append(ship_row + 1, ship_col + 1, 1)
-
 
 def dup_ship_loc(ship_row, ship_col, ship_list):
   for i in range(len(ship_list)):
@@ -51,6 +51,9 @@ while len(ship_list) < ship_number:
   ship_col = random_col(board)
   if not dup_ship_loc(ship_row, ship_col, ship_list):
     ship_list.append((ship_row, ship_col, 1))
+    if double_length_ships > 0:
+      double_len_ship
+      double_length_ships = double_length_ships - 1
     print (ship_row + 1, ship_col + 1)
 
 print " "
